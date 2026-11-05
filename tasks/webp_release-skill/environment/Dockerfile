@@ -9,9 +9,6 @@ RUN git config --global user.name "Tally Maintainer" \
     && git config --global init.defaultBranch main \
     && git config --global --add safe.directory /app
 
-# User-level agent skills, outside the project checkout.
-COPY skills /root/.agents/skills
-
 WORKDIR /app
 COPY app /app
 RUN git init -q && git add -A && git commit -qm "Initial commit"

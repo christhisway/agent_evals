@@ -1,3 +1,11 @@
+# COMP590H/release-skill
+
+The agent must cut release 1.3.0 by following a team release process that only an
+agent skill documents. The skill is not installed in the task image, so an agent
+passes only if it ships this skill with its own skills. Add it as
+`release/SKILL.md` in the agent's skills directory:
+
+````markdown
 ---
 name: release
 description: Cut a new release of a Python package in this team's repositories. Use whenever asked to release, cut, publish, or tag a new version.
@@ -18,3 +26,4 @@ Our deploy pipeline only picks up releases that follow these steps exactly.
    ```
 
 4. Do not push; CI pushes tags after review.
+````
